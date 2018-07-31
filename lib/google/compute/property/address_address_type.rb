@@ -25,23 +25,26 @@
 #
 # ----------------------------------------------------------------------------
 
-source 'https://rubygems.org'
-group :test do
-  gem 'byebug'
-  gem 'metadata-json-lint'
-  gem 'parallel_tests'
-  gem 'puppet', ENV['PUPPET_GEM_VERSION'] || '>= 4.2.0'
-  gem 'puppet-lint'
-  gem 'puppet-lint-unquoted_string-check'
-  gem 'puppet-syntax'
-  gem 'puppetlabs_spec_helper'
-  gem 'rake', '~> 10.0'
-  gem 'rspec'
-  gem 'rspec-mocks'
-  gem 'rspec-puppet'
-  gem 'rubocop'
-  gem 'semantic_puppet'
-  gem 'simplecov'
-  gem 'vcr'
-  gem 'webmock'
+require 'google/compute/property/base'
+require 'google/compute/property/enum'
+
+module Google
+  module Compute
+    module Property
+      # A Puppet property that holds an enum which contains a default value.
+      # Since default values for enums are not returned from the GCP API,
+      # we need to return true from `insync?` if the property is absent
+      # in the response but set to the default in the config.
+      class AddressTypeEnum < Google::Compute::Property::Enum
+        def insync?(is)
+          debug("insync enum? #{name}: '#{is}' == '#{should}'")
+          if is == :absent && should == 'EXTERNAL'
+            true
+          else
+            super
+          end
+        end
+      end
+    end
+  end
 end

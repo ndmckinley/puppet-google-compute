@@ -48,7 +48,9 @@ $LOAD_PATH.unshift(File.expand_path('./spec/stubs'))
 #----------------------------------------------------------
 # Block all network traffic
 
-require 'network_blocker'
+require 'puppetlabs_spec_helper/module_spec_helper'
+
+require 'webmock/rspec'
 
 #----------------------------------------------------------
 # Auto require files
@@ -56,7 +58,6 @@ require 'network_blocker'
 files = []
 files << 'spec/bundle.rb'
 files << 'spec/copyright.rb'
-files << 'spec/fake_auth.rb'
 files << 'spec/test_constants.rb'
 files << File.join('lib', '**', '*.rb')
 
@@ -82,6 +83,7 @@ end
 require 'rspec-puppet'
 
 RSpec.configure do |c|
+  puts "MODULE PATH = " + c.module_path
   c.include PuppetSpec::Compiler
   c.include PuppetSpec::Files
 
@@ -113,9 +115,17 @@ RSpec.configure do |c|
 
   c.after :each do
     Puppet::Test::TestHelper.after_each_test
-    Dir.stub(:entries)
     PuppetSpec::Files.cleanup
   end
+end
+
+def get_example(example_name)
+  # It's not ideal, but puppet unit tests don't support
+  # adding facts, so we have to do these substitutions
+  # ourselves.
+  File.open("examples/#{example_name}.pp", 'rb').read\
+      .gsub('$project', '"personal-graphite-testing"')\
+      .gsub('$cred_path', '"~/.gcloud/Terraform.json"')
 end
 
 require 'mocha/test_unit'

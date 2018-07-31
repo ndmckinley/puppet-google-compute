@@ -53,7 +53,7 @@
 #
 #   https://forge.puppet.com/google/gauth
 #
-gauth_credential { 'mycred':
+ gauth_credential { 'mycred':
   path     => $cred_path, # e.g. '/home/nelsonjr/my_account.json'
   provider => serviceaccount,
   scopes   => [

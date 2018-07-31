@@ -4,6 +4,9 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     ast (2.4.0)
+    byebug (10.0.2)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.3)
     docile (1.1.5)
     facter (2.5.1)
@@ -15,6 +18,7 @@ GEM
       fast_gettext (~> 1.1.0)
       gettext (>= 3.0.2)
       locale
+    hashdiff (0.3.7)
     hiera (3.4.2)
     json (2.1.0)
     json-schema (2.8.0)
@@ -73,6 +77,8 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
+    safe_yaml (1.0.4)
+    semantic_puppet (1.0.2)
     simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -81,11 +87,17 @@ GEM
     spdx-licenses (1.1.0)
     text (1.3.1)
     unicode-display_width (1.3.0)
+    vcr (4.0.0)
+    webmock (3.4.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   metadata-json-lint
   parallel_tests
   puppet (>= 4.2.0)
@@ -98,7 +110,10 @@ DEPENDENCIES
   rspec-mocks
   rspec-puppet
   rubocop
+  semantic_puppet
   simplecov
+  vcr
+  webmock
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
