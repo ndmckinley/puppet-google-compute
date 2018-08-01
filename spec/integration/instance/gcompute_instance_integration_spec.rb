@@ -10,12 +10,8 @@ end
 describe 'instance.create', vcr: true do
   it 'creates non-existent instance' do
     VCR.use_cassette('create_instance') do
-      require 'byebug'
       example = get_example('instance')
-      Dir.chdir('spec/fixtures/modules') do
-        byebug
-        apply_compiled_manifest(example)
-      end
+      apply_with_error_check(example)
     end
   end
 end
