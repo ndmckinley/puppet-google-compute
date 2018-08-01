@@ -28,6 +28,8 @@
 source 'https://rubygems.org'
 group :test do
   gem 'byebug'
+  gem 'google-api-client'
+  gem 'googleauth'
   gem 'metadata-json-lint'
   gem 'parallel_tests'
   gem 'puppet', ENV['PUPPET_GEM_VERSION'] || '>= 4.2.0'

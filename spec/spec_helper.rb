@@ -34,40 +34,18 @@
 ENV['TZ'] = 'UTC'
 
 #----------------------------------------------------------
-# Setup code coverage
-
-require 'simplecov'
-SimpleCov.start unless ENV['DISABLE_COVERAGE']
-
-#----------------------------------------------------------
 # Add test path to the search libs
 
 $LOAD_PATH.unshift(File.expand_path('.'))
 $LOAD_PATH.unshift(File.expand_path('./spec/stubs'))
+$LOAD_PATH.unshift(File.expand_path('./spec/fixtures/modules/gauth/lib'))
+$LOAD_PATH.unshift(File.expand_path('./spec/fixtures/modules/gcompute/lib'))
 
 #----------------------------------------------------------
 # Block all network traffic
 
 require 'puppetlabs_spec_helper/module_spec_helper'
-
 require 'webmock/rspec'
-
-#----------------------------------------------------------
-# Auto require files
-
-files = []
-files << 'spec/bundle.rb'
-files << 'spec/copyright.rb'
-files << 'spec/test_constants.rb'
-files << File.join('lib', '**', '*.rb')
-
-# Require all files so we can track them via code coverage
-Dir[*files].reject { |p| File.directory? p }
-           .each do |f|
-             puts "Auto requiring #{f}" \
-               if ENV['RSPEC_DEBUG']
-             require f
-           end
 
 #----------------------------------------------------------
 # Setup PuppetSpec to allow executing the Puppet manifests from within tests
@@ -125,7 +103,7 @@ def get_example(example_name)
   # ourselves.
   File.open("examples/#{example_name}.pp", 'rb').read\
       .gsub('$project', '"personal-graphite-testing"')\
-      .gsub('$cred_path', '"~/.gcloud/Terraform.json"')
+      .gsub('$cred_path', '"/home/nmckinley/.gcloud/Terraform.json"')
 end
 
 require 'mocha/test_unit'
