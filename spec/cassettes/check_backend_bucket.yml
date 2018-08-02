@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMDg3LCJpYXQiOjE1MzMxNzE5NjcsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.o_iZiT8_fVfCa11_GaH6hDEN1g9DYf_7_OYpwUmRYNvboBtcQ3lp37vIDa7cVL17h8diIDcae4IkCWbMslCxwEFDXpWrQfx-I4kfqAbBpK-roASjSTYLXQ0LE9HP6D-91DLLcf3xFF67oKoLWR1yRpKJys0y9BHRGKwmHjb31htEzAXYbpLqp3A39vhAGnFK4Ch37CrWoeShBdgv8tVr55tAhqdEOuMJsz5h3lgAQW0PQ4WbzQTBXi2eDHGXQchmqAJ3QgAxztO9nwP1JaieJnTGDfyeyWSgUbP5NVtAplRpo9a3wYoOuh7HPDwYO3WchMPE653HBPPbgTn1CuX1lw
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:07:08 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBrxfC5Y26Cyqvzdy9hVdhJxejgzlkj6ZF_fn1vmgNnLBQEf8EAmTb1YuOOW_9m67jhuosHYf6NlXwkRGz9GQBKWc7XiNSxUitungDRUZ09STO90se4vDcW8",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:07:08 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/backendBuckets/be-bucket-connection
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBrxfC5Y26Cyqvzdy9hVdhJxejgzlkj6ZF_fn1vmgNnLBQEf8EAmTb1YuOOW_9m67jhuosHYf6NlXwkRGz9GQBKWc7XiNSxUitungDRUZ09STO90se4vDcW8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 02 Aug 2018 01:07:08 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:07:08 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"aKLSUL5roEilT9nU_lY4AAbJlk4=/BK_1DKuMGBs2lAU6xVSqvQAKhHM="'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "kind": "compute#backendBucket",
+         "id": "1751394215655368662",
+         "creationTimestamp": "2018-08-01T18:07:05.181-07:00",
+         "name": "be-bucket-connection",
+         "description": "A BackendBucket to connect LNB w/ Storage Bucket",
+         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/backendBuckets/be-bucket-connection",
+         "bucketName": "backend-bucket-test",
+         "enableCdn": true
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:07:08 GMT
+recorded_with: VCR 4.0.0

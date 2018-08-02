@@ -1,0 +1,366 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMDc2LCJpYXQiOjE1MzMxNzE5NTYsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.LvZHvHA0LFYlvs5L_Wb9sNmB1JOZ2DABgppj2P0qy3P18MsXbTXlGswA0Mtx8Bu6tsx8yKLDsn85Rn8ZmJnYrmPE21X4KKje5rY79daMo0vuu1pTCFrqP2RRgS4b1kiQPGEJfKM8cc6aBKoww5g2zDbFXMSy_87pBF_2BtBhdo4riC13J3PuKQu4OM1NaChsGNbqOORe1-nu0SF_Xbbsr_IHtZOY5Nq8XNzKwQ2lXNYNVoLv5i0gcA1Ur-kbvvDup40aGkk0w5GVEokjztFp2_NBnAFaDNg526uBPjZKsmZeNtfLdIYke7oSOUDHhp0CrMD-9s02drCl9mOcJlIJWQ
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:06:56 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBlhoT9NDog_wveDuurDbh9QYMxpAV0GPpkECSJVqN00936CmLk_dWB56t_YyhYBuKl2xtdCabmEkA_rxWTmAjpHLBMPXT94PEeLWO37At4eGm_0CID6RssE",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:06:56 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/regions/us-west1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBlhoT9NDog_wveDuurDbh9QYMxpAV0GPpkECSJVqN00936CmLk_dWB56t_YyhYBuKl2xtdCabmEkA_rxWTmAjpHLBMPXT94PEeLWO37At4eGm_0CID6RssE
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 02 Aug 2018 01:06:56 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:06:56 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"BiNucjPfjuxk5gKtrPWrD9BBIDQ=/7-mxJ4ASq6BHSo13ai4OOQi8DmM="'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "kind": "compute#region",
+         "id": "1210",
+         "creationTimestamp": "1969-12-31T16:00:00.000-08:00",
+         "name": "us-west1",
+         "description": "us-west1",
+         "status": "UP",
+         "zones": [
+          "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-west1-a",
+          "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-west1-b",
+          "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-west1-c"
+         ],
+         "quotas": [
+          {
+           "metric": "CPUS",
+           "limit": 72.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "DISKS_TOTAL_GB",
+           "limit": 40960.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "STATIC_ADDRESSES",
+           "limit": 21.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "IN_USE_ADDRESSES",
+           "limit": 69.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "SSD_TOTAL_GB",
+           "limit": 20480.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "LOCAL_SSD_TOTAL_GB",
+           "limit": 20000.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "INSTANCE_GROUPS",
+           "limit": 300.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "INSTANCE_GROUP_MANAGERS",
+           "limit": 150.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "INSTANCES",
+           "limit": 720.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "AUTOSCALERS",
+           "limit": 150.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "REGIONAL_AUTOSCALERS",
+           "limit": 100.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "REGIONAL_INSTANCE_GROUP_MANAGERS",
+           "limit": 100.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "PREEMPTIBLE_CPUS",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "NVIDIA_K80_GPUS",
+           "limit": 8.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "COMMITMENTS",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "INTERNAL_ADDRESSES",
+           "limit": 200.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "NVIDIA_P100_GPUS",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "PREEMPTIBLE_LOCAL_SSD_GB",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "PREEMPTIBLE_NVIDIA_K80_GPUS",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "PREEMPTIBLE_NVIDIA_P100_GPUS",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "NVIDIA_V100_GPUS",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "PREEMPTIBLE_NVIDIA_V100_GPUS",
+           "limit": 0.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "INTERCONNECT_ATTACHMENTS_PER_REGION",
+           "limit": 16.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "INTERCONNECT_ATTACHMENTS_TOTAL_MBPS",
+           "limit": 80000.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "RESOURCE_POLICIES",
+           "limit": 10.0,
+           "usage": 0.0
+          },
+          {
+           "metric": "IN_USE_BACKUP_SCHEDULES",
+           "limit": 50.0,
+           "usage": 0.0
+          }
+         ],
+         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/regions/us-west1"
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:06:56 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMDc2LCJpYXQiOjE1MzMxNzE5NTYsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.LvZHvHA0LFYlvs5L_Wb9sNmB1JOZ2DABgppj2P0qy3P18MsXbTXlGswA0Mtx8Bu6tsx8yKLDsn85Rn8ZmJnYrmPE21X4KKje5rY79daMo0vuu1pTCFrqP2RRgS4b1kiQPGEJfKM8cc6aBKoww5g2zDbFXMSy_87pBF_2BtBhdo4riC13J3PuKQu4OM1NaChsGNbqOORe1-nu0SF_Xbbsr_IHtZOY5Nq8XNzKwQ2lXNYNVoLv5i0gcA1Ur-kbvvDup40aGkk0w5GVEokjztFp2_NBnAFaDNg526uBPjZKsmZeNtfLdIYke7oSOUDHhp0CrMD-9s02drCl9mOcJlIJWQ
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:06:56 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBlhoT9NDog_wveDuurDbh9QYMxpAV0GPpkECSJVqN00936CmLk_dWB56t_YyhYBuKl2xtdCabmEkA_rxWTmAjpHLBMPXT94PEeLWO37At4eGm_0CID6RssE",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:06:56 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/regions/us-west1/addresses/test1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBlhoT9NDog_wveDuurDbh9QYMxpAV0GPpkECSJVqN00936CmLk_dWB56t_YyhYBuKl2xtdCabmEkA_rxWTmAjpHLBMPXT94PEeLWO37At4eGm_0CID6RssE
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 02 Aug 2018 01:06:56 GMT
+      Expires:
+      - Thu, 02 Aug 2018 01:06:56 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "error": {
+          "errors": [
+           {
+            "domain": "global",
+            "reason": "notFound",
+            "message": "The resource 'projects/personal-graphite-testing/regions/us-west1/addresses/test1' was not found"
+           }
+          ],
+          "code": 404,
+          "message": "The resource 'projects/personal-graphite-testing/regions/us-west1/addresses/test1' was not found"
+         }
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:06:56 GMT
+recorded_with: VCR 4.0.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTYyNjA0LCJpYXQiOjE1MzMxNjI0ODQsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.LTP6Lsr_s5E_N-aiTuFBSKdiH0jJ4v0nZVFXU7tXEes1oQJo_Ia4GxUiBjkRqKIkmPwMop2uDqOwklkD1cqukJCj8rdNXTo62oHhBpxS8Wp3yM7uXmuQnkQSdJau78wMyAjlGJNVeR_f25fCUAxUN_nfnLpVnY_Z9wxvIgmEWyhj-uUJ-CdW9EsThpqh_9zr1oMzpFv9fnRglzr5DPYh3hyvM-qSoeJ2qpvp3kz8g_G6RYpafWypJkdt0Uv-Zo9IeEPKHLX1y-n4raXqK6DHm1sQFItipP2zvolW_b_Fq_l8Lz4gyG26nm8TQOAUW1pHvNxCdkWlKgjfQSiEEmsDiA
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyNDM5LCJpYXQiOjE1MzMxNzIzMTksInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.CI_LAPYothvj9sUrG1HqMKd5U1eC_oCTNslIm7hyE3oVHd4I_Ho4E81UH7FLWyGAp7XZrG8JFtTeGDOfulNanMWsYrET8XutIwbmkkP4OAACge0bHbJNGKDcS7JdfNxKFUGDKDQc3EjldM4woiAdZHM21hylrxlhObaaRvnj-enMnq7Zp3GfCxGR40dFijrXlBmiHfGEHVWLOtz3XvfOFYiLC9lERe8ueSZXhuHpT_N85QYGmrc5sBEteF_y7Bh10yY3Y5VJeQj3OEdJ8M1l02JOju5Z4Gzo0HIEWeyeVvEHorgmM6rGZ0IwxbMOqbJvVrqEk2K83NV0e89z-eaYZQ
     headers:
       User-Agent:
       - Faraday v0.15.2
@@ -27,7 +27,7 @@ http_interactions:
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Date:
-      - Wed, 01 Aug 2018 22:29:04 GMT
+      - Thu, 02 Aug 2018 01:12:59 GMT
       Vary:
       - Origin
       - X-Origin
@@ -47,15 +47,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-         "access_token": "ya29.c.EloKBvgxn66BcYCGSdYs7Wkt1Voml80MTigW-LZ5Uwu4LzmwaU0RDQZWkTTas1wiOHiVnGJIDgA7R7Txvo9qbgTdNnL6TJoa_4Fv_7wBXnstiWsHUCO8OKgzzzE",
+         "access_token": "ya29.c.EloLBgoq4UKZfRAbUu_7ZtQDOtIqz4YnxZItEoMYoS_RpbR2AcsygALjelSmn5pLXn68DYFBX89A1z4V72yiSv97H3HnB-j0U8_ClCwRGOqhx_ckwT5phU3HlD0",
          "token_type": "Bearer",
          "expires_in": 3600
         }
     http_version: 
-  recorded_at: Wed, 01 Aug 2018 22:29:04 GMT
+  recorded_at: Thu, 02 Aug 2018 01:12:59 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-central1-a
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-west1-a
     body:
       encoding: US-ASCII
       string: ''
@@ -69,20 +69,20 @@ http_interactions:
       Host:
       - www.googleapis.com
       Authorization:
-      - Bearer ya29.c.EloKBvgxn66BcYCGSdYs7Wkt1Voml80MTigW-LZ5Uwu4LzmwaU0RDQZWkTTas1wiOHiVnGJIDgA7R7Txvo9qbgTdNnL6TJoa_4Fv_7wBXnstiWsHUCO8OKgzzzE
+      - Bearer ya29.c.EloLBgoq4UKZfRAbUu_7ZtQDOtIqz4YnxZItEoMYoS_RpbR2AcsygALjelSmn5pLXn68DYFBX89A1z4V72yiSv97H3HnB-j0U8_ClCwRGOqhx_ckwT5phU3HlD0
   response:
     status:
       code: 200
       message: OK
     headers:
       Expires:
-      - Wed, 01 Aug 2018 22:29:04 GMT
+      - Thu, 02 Aug 2018 01:12:59 GMT
       Date:
-      - Wed, 01 Aug 2018 22:29:04 GMT
+      - Thu, 02 Aug 2018 01:12:59 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - '"X7iAgfhOcTMhLC9u3dY4Bk9Hfs4=/6Y89sE7sgUkwMgzAcc1EKNXKnbE="'
+      - '"KhEcxHStOi6iFPV_39gQenOkfmU=/Baj1-07jDyMXGTGwLvAc66QkQM8="'
       Vary:
       - Origin
       - X-Origin
@@ -103,27 +103,26 @@ http_interactions:
       string: |
         {
          "kind": "compute#zone",
-         "id": "2000",
+         "id": "2210",
          "creationTimestamp": "1969-12-31T16:00:00.000-08:00",
-         "name": "us-central1-a",
-         "description": "us-central1-a",
+         "name": "us-west1-a",
+         "description": "us-west1-a",
          "status": "UP",
-         "region": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/regions/us-central1",
-         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-central1-a",
+         "region": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/regions/us-west1",
+         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-west1-a",
          "availableCpuPlatforms": [
           "Intel Skylake",
-          "Intel Broadwell",
-          "Intel Sandy Bridge"
+          "Intel Broadwell"
          ]
         }
     http_version: 
-  recorded_at: Wed, 01 Aug 2018 22:29:04 GMT
+  recorded_at: Thu, 02 Aug 2018 01:12:59 GMT
 - request:
     method: post
     uri: https://www.googleapis.com/oauth2/v4/token
     body:
       encoding: ASCII-8BIT
-      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTYyNjA0LCJpYXQiOjE1MzMxNjI0ODQsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.LTP6Lsr_s5E_N-aiTuFBSKdiH0jJ4v0nZVFXU7tXEes1oQJo_Ia4GxUiBjkRqKIkmPwMop2uDqOwklkD1cqukJCj8rdNXTo62oHhBpxS8Wp3yM7uXmuQnkQSdJau78wMyAjlGJNVeR_f25fCUAxUN_nfnLpVnY_Z9wxvIgmEWyhj-uUJ-CdW9EsThpqh_9zr1oMzpFv9fnRglzr5DPYh3hyvM-qSoeJ2qpvp3kz8g_G6RYpafWypJkdt0Uv-Zo9IeEPKHLX1y-n4raXqK6DHm1sQFItipP2zvolW_b_Fq_l8Lz4gyG26nm8TQOAUW1pHvNxCdkWlKgjfQSiEEmsDiA
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyNDM5LCJpYXQiOjE1MzMxNzIzMTksInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.CI_LAPYothvj9sUrG1HqMKd5U1eC_oCTNslIm7hyE3oVHd4I_Ho4E81UH7FLWyGAp7XZrG8JFtTeGDOfulNanMWsYrET8XutIwbmkkP4OAACge0bHbJNGKDcS7JdfNxKFUGDKDQc3EjldM4woiAdZHM21hylrxlhObaaRvnj-enMnq7Zp3GfCxGR40dFijrXlBmiHfGEHVWLOtz3XvfOFYiLC9lERe8ueSZXhuHpT_N85QYGmrc5sBEteF_y7Bh10yY3Y5VJeQj3OEdJ8M1l02JOju5Z4Gzo0HIEWeyeVvEHorgmM6rGZ0IwxbMOqbJvVrqEk2K83NV0e89z-eaYZQ
     headers:
       User-Agent:
       - Faraday v0.15.2
@@ -145,7 +144,7 @@ http_interactions:
       Expires:
       - Mon, 01 Jan 1990 00:00:00 GMT
       Date:
-      - Wed, 01 Aug 2018 22:29:04 GMT
+      - Thu, 02 Aug 2018 01:12:59 GMT
       Vary:
       - Origin
       - X-Origin
@@ -165,15 +164,15 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-         "access_token": "ya29.c.EloKBvgxn66BcYCGSdYs7Wkt1Voml80MTigW-LZ5Uwu4LzmwaU0RDQZWkTTas1wiOHiVnGJIDgA7R7Txvo9qbgTdNnL6TJoa_4Fv_7wBXnstiWsHUCO8OKgzzzE",
+         "access_token": "ya29.c.EloLBgoq4UKZfRAbUu_7ZtQDOtIqz4YnxZItEoMYoS_RpbR2AcsygALjelSmn5pLXn68DYFBX89A1z4V72yiSv97H3HnB-j0U8_ClCwRGOqhx_ckwT5phU3HlD0",
          "token_type": "Bearer",
          "expires_in": 3600
         }
     http_version: 
-  recorded_at: Wed, 01 Aug 2018 22:29:04 GMT
+  recorded_at: Thu, 02 Aug 2018 01:12:59 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-central1-a/instances/instance-test
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/zones/us-west1-a/instanceGroupManagers/test1
     body:
       encoding: US-ASCII
       string: ''
@@ -187,7 +186,7 @@ http_interactions:
       Host:
       - www.googleapis.com
       Authorization:
-      - Bearer ya29.c.EloKBvgxn66BcYCGSdYs7Wkt1Voml80MTigW-LZ5Uwu4LzmwaU0RDQZWkTTas1wiOHiVnGJIDgA7R7Txvo9qbgTdNnL6TJoa_4Fv_7wBXnstiWsHUCO8OKgzzzE
+      - Bearer ya29.c.EloLBgoq4UKZfRAbUu_7ZtQDOtIqz4YnxZItEoMYoS_RpbR2AcsygALjelSmn5pLXn68DYFBX89A1z4V72yiSv97H3HnB-j0U8_ClCwRGOqhx_ckwT5phU3HlD0
   response:
     status:
       code: 404
@@ -199,9 +198,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 01 Aug 2018 22:29:04 GMT
+      - Thu, 02 Aug 2018 01:12:59 GMT
       Expires:
-      - Wed, 01 Aug 2018 22:29:04 GMT
+      - Thu, 02 Aug 2018 01:12:59 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -223,13 +222,13 @@ http_interactions:
            {
             "domain": "global",
             "reason": "notFound",
-            "message": "The resource 'projects/personal-graphite-testing/zones/us-central1-a/instances/instance-test' was not found"
+            "message": "The resource 'projects/personal-graphite-testing/zones/us-west1-a/instanceGroupManagers/test1' was not found"
            }
           ],
           "code": 404,
-          "message": "The resource 'projects/personal-graphite-testing/zones/us-central1-a/instances/instance-test' was not found"
+          "message": "The resource 'projects/personal-graphite-testing/zones/us-west1-a/instanceGroupManagers/test1' was not found"
          }
         }
     http_version: 
-  recorded_at: Wed, 01 Aug 2018 22:29:04 GMT
+  recorded_at: Thu, 02 Aug 2018 01:12:59 GMT
 recorded_with: VCR 4.0.0

@@ -1,0 +1,586 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMTQ2LCJpYXQiOjE1MzMxNzIwMjYsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.bLIfKAEzfmhO7kWHlpqMAaPgSfoPUCm4VLv7ncQH63GM0GZbjpaXqDrQUDzwj_EaD47Jk643vtc03fZnfrj6EHw08c0i1uNoL3CQ7rPDp0Ck72D9AjrKlXdYvTOPo0FN5xE0_g5fUh7qiUp1at1kOF5VyRPkZat4SpRIJqiupyqWn-dl9kbNJLeBg1PNBpveqfFuTwaWCE0j9XhAfvkREKaMaxh5r5djIpI3qgWdr3qM1G87q2Of8HxGXDe2omFmHl-vNtHsruNGTLicukjiXNLX-MfJETmD6ZxgTbL-_QxBrTRfTmOHMdnSJSNSoH2jPuKFIim6EC29SQBmthJQRw
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:06 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBi9P100Bp-VZrx4DcwnW_e0eUjJfTch-MBrUQB1hwMfIbj34f-PJSvUSh_CSiDxqoKQwR6EqMy4nHbJxWlY3G407hYqO8ENNncP4PnuQsdpVBSQ1oig8YjY",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:06 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBi9P100Bp-VZrx4DcwnW_e0eUjJfTch-MBrUQB1hwMfIbj34f-PJSvUSh_CSiDxqoKQwR6EqMy4nHbJxWlY3G407hYqO8ENNncP4PnuQsdpVBSQ1oig8YjY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 02 Aug 2018 01:08:06 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:06 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"MqD6xJZEGrSM9YdhAHol1VLYN4Q=/RX7JqLoZNiU6tgOzmEMCl37ubp8="'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "kind": "compute#httpsHealthCheck",
+         "id": "3428265107188082587",
+         "creationTimestamp": "2018-08-01T18:08:04.169-07:00",
+         "name": "my-app-https-hc",
+         "description": "",
+         "host": "",
+         "requestPath": "/",
+         "port": 8080,
+         "checkIntervalSec": 5,
+         "timeoutSec": 2,
+         "unhealthyThreshold": 5,
+         "healthyThreshold": 10,
+         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc"
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:06 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMTQ2LCJpYXQiOjE1MzMxNzIwMjYsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.bLIfKAEzfmhO7kWHlpqMAaPgSfoPUCm4VLv7ncQH63GM0GZbjpaXqDrQUDzwj_EaD47Jk643vtc03fZnfrj6EHw08c0i1uNoL3CQ7rPDp0Ck72D9AjrKlXdYvTOPo0FN5xE0_g5fUh7qiUp1at1kOF5VyRPkZat4SpRIJqiupyqWn-dl9kbNJLeBg1PNBpveqfFuTwaWCE0j9XhAfvkREKaMaxh5r5djIpI3qgWdr3qM1G87q2Of8HxGXDe2omFmHl-vNtHsruNGTLicukjiXNLX-MfJETmD6ZxgTbL-_QxBrTRfTmOHMdnSJSNSoH2jPuKFIim6EC29SQBmthJQRw
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:06 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBi9P100Bp-VZrx4DcwnW_e0eUjJfTch-MBrUQB1hwMfIbj34f-PJSvUSh_CSiDxqoKQwR6EqMy4nHbJxWlY3G407hYqO8ENNncP4PnuQsdpVBSQ1oig8YjY",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:06 GMT
+- request:
+    method: delete
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBi9P100Bp-VZrx4DcwnW_e0eUjJfTch-MBrUQB1hwMfIbj34f-PJSvUSh_CSiDxqoKQwR6EqMy4nHbJxWlY3G407hYqO8ENNncP4PnuQsdpVBSQ1oig8YjY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:06 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "kind": "compute#operation",
+         "id": "6702855440466700185",
+         "name": "operation-1533172086359-57269719643db-f3577bcd-a8b9fb64",
+         "operationType": "delete",
+         "targetLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc",
+         "targetId": "3428265107188082587",
+         "status": "PENDING",
+         "user": "47465025999-compute@developer.gserviceaccount.com",
+         "progress": 0,
+         "insertTime": "2018-08-01T18:08:06.672-07:00",
+         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/operations/operation-1533172086359-57269719643db-f3577bcd-a8b9fb64"
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:06 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMTQ3LCJpYXQiOjE1MzMxNzIwMjcsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.ZGR_OUHZFR2Mryk2xUzmcBU5v_GKr0TSJ6py7_R0r1gZchSzm2qsQKuCxMN_DSMJcNqmjJnTa9b7u4p3KW51NQbgD3_gLteyHTkph9RhsCELXc3Ddd0u34D4B97SXJgKGGwHjLipsW0zkM-KvfYgRuebx6GLBLLdbn_NlDGMLQIQ2XU5U11i2WWqYHHBHA-DB-aPN25VwFu-yOrXcYem-WB5dz2EpK1ebnZdTPZGgYcnLbilbbaKIcInjpQIUiWUJkOVtLdEhaFhFiazFaURQaIwKnanjsqebo7qGvatoVDH-1CLNMsuTSO1HZDG0NxiEiEZ5eTiXEdkWt_2jaglBQ
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:08 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBoN7Vc2sTERkF0t9sfmcAJsnTnQY0upXHg01PiwTQrXxKFlfW2YYiagIPSwfwPP7sXMzYGZYrrIXN1bOUX75R4QOIq0X8KYd7ynUkBuia8zWesd52pw_SmQ",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:08 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/operations/operation-1533172086359-57269719643db-f3577bcd-a8b9fb64
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBoN7Vc2sTERkF0t9sfmcAJsnTnQY0upXHg01PiwTQrXxKFlfW2YYiagIPSwfwPP7sXMzYGZYrrIXN1bOUX75R4QOIq0X8KYd7ynUkBuia8zWesd52pw_SmQ
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 02 Aug 2018 01:08:08 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:08 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"nQHyi_8Cchua2n8g__ayqIvaIAo=/o-2FQrGwluuT6mkohM5u90wN__M="'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "kind": "compute#operation",
+         "id": "6702855440466700185",
+         "name": "operation-1533172086359-57269719643db-f3577bcd-a8b9fb64",
+         "operationType": "delete",
+         "targetLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc",
+         "targetId": "3428265107188082587",
+         "status": "RUNNING",
+         "user": "47465025999-compute@developer.gserviceaccount.com",
+         "progress": 0,
+         "insertTime": "2018-08-01T18:08:06.672-07:00",
+         "startTime": "2018-08-01T18:08:07.359-07:00",
+         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/operations/operation-1533172086359-57269719643db-f3577bcd-a8b9fb64"
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:08 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMTQ5LCJpYXQiOjE1MzMxNzIwMjksInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.anlf7UKgigywg0X7-N2YDk6fV7y5wwdulvZZCVERsY7F3mfGgXQhADtv7vAApsHe242-ZHLaYypNuFu7tJh3lsMFROuqUHpImEvCCFHfTrLHUa_h6vp4gMMOEI0LEE9akFavzuKAp2ztJLhRZLJ5OA1gKWDqZ2Nkkk7ePgijYKhPLQOKB6ylBBbquJEVe73KiH09GMC-lBc2Yu7jr5cy-_0eh8jSZ2OfmX7LnoClt4PMXwFHkv_Q0c01NbNm0TUutz6DYwV7EJ53x--Waip_LQZmvMaaYbbHPKUYor9EveQHA8m2Ipd6eQFE5ER0F1E_-2-LcFyLlXmvcdZ6Ta3HCw
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:09 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBmxbhgdVKiD5u-nbuyzrqmXsaaoikkpBa1ovUVqF1YzW482K6glA5EDcTCEU2xNzGZLv2zghYtwFhG3ACPnl2f8vg8WhgF3BbAwQCvLv0zo4hDUtn-ViBCo",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:09 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/operations/operation-1533172086359-57269719643db-f3577bcd-a8b9fb64
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBmxbhgdVKiD5u-nbuyzrqmXsaaoikkpBa1ovUVqF1YzW482K6glA5EDcTCEU2xNzGZLv2zghYtwFhG3ACPnl2f8vg8WhgF3BbAwQCvLv0zo4hDUtn-ViBCo
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 02 Aug 2018 01:08:09 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:09 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"S7xxFquf95jlrh16JIBqNrnqPBE=/M9v78C3BIJlXGa0_MRjjWD1hpX0="'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "kind": "compute#operation",
+         "id": "6702855440466700185",
+         "name": "operation-1533172086359-57269719643db-f3577bcd-a8b9fb64",
+         "operationType": "delete",
+         "targetLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc",
+         "targetId": "3428265107188082587",
+         "status": "DONE",
+         "user": "47465025999-compute@developer.gserviceaccount.com",
+         "progress": 100,
+         "insertTime": "2018-08-01T18:08:06.672-07:00",
+         "startTime": "2018-08-01T18:08:07.359-07:00",
+         "endTime": "2018-08-01T18:08:08.512-07:00",
+         "selfLink": "https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/operations/operation-1533172086359-57269719643db-f3577bcd-a8b9fb64"
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:09 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMTQ5LCJpYXQiOjE1MzMxNzIwMjksInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.anlf7UKgigywg0X7-N2YDk6fV7y5wwdulvZZCVERsY7F3mfGgXQhADtv7vAApsHe242-ZHLaYypNuFu7tJh3lsMFROuqUHpImEvCCFHfTrLHUa_h6vp4gMMOEI0LEE9akFavzuKAp2ztJLhRZLJ5OA1gKWDqZ2Nkkk7ePgijYKhPLQOKB6ylBBbquJEVe73KiH09GMC-lBc2Yu7jr5cy-_0eh8jSZ2OfmX7LnoClt4PMXwFHkv_Q0c01NbNm0TUutz6DYwV7EJ53x--Waip_LQZmvMaaYbbHPKUYor9EveQHA8m2Ipd6eQFE5ER0F1E_-2-LcFyLlXmvcdZ6Ta3HCw
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 02 Aug 2018 01:08:09 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.c.EloLBmxbhgdVKiD5u-nbuyzrqmXsaaoikkpBa1ovUVqF1YzW482K6glA5EDcTCEU2xNzGZLv2zghYtwFhG3ACPnl2f8vg8WhgF3BbAwQCvLv0zo4hDUtn-ViBCo",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:09 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBmxbhgdVKiD5u-nbuyzrqmXsaaoikkpBa1ovUVqF1YzW482K6glA5EDcTCEU2xNzGZLv2zghYtwFhG3ACPnl2f8vg8WhgF3BbAwQCvLv0zo4hDUtn-ViBCo
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 02 Aug 2018 01:08:09 GMT
+      Expires:
+      - Thu, 02 Aug 2018 01:08:09 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "error": {
+          "errors": [
+           {
+            "domain": "global",
+            "reason": "notFound",
+            "message": "The resource 'projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc' was not found"
+           }
+          ],
+          "code": 404,
+          "message": "The resource 'projects/personal-graphite-testing/global/httpsHealthChecks/my-app-https-hc' was not found"
+         }
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:08:09 GMT
+recorded_with: VCR 4.0.0

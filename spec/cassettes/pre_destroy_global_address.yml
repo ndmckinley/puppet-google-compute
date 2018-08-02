@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiI0NzQ2NTAyNTk5OS1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3Y0L3Rva2VuIiwiZXhwIjoxNTMzMTcyMTIwLCJpYXQiOjE1MzMxNzIwMDAsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlIn0.z4H58SUIRd5ENAfyU8yc_rcgESRwFaqE1aLzts9zi_tC8hyktQKAjpE7Yq6F8lA7SHujS6RkInapsBanJfpuWV-4ih3HlL6NI7U44dOhnEwGX-Wu2rOyxQdwc_2L5j3GtfDOyp1HxmHTFstzxEzyA8SW9CGKI838A3wegGPY3ACL4K6S4cJDF6R1R1Jj9uuuTjCB52xHcwRy5cS4v_LBzAEA9LFEFRbABscyrvssmJVORTBPValpAUr1PUH9vRUIi8OoEHd2zvDyX-Wnt5Qn_xa_7xQMZIyYhGkBq0sCnsokuqiua7zG_FY188rqMDQo6D73DHGvo_GQ7ffqkNwEsQ
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Thu, 02 Aug 2018 01:07:40 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.EloLBvwrri8alIYuUbWAgKiEgUANMO-OiKRiczx1YfBnisb9uow75dOqsrSnMcPTgcIglC16s0tNfnhBlLfvTrhJfHeT-bH90CmVfx8t3eiFv0Yb6G4AXJ0gVqU",
+          "expires_in": 3600,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:07:40 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/personal-graphite-testing/global/addresses/my-app-lb-address
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - GooglePuppetCompute/1.0.0 Puppet/5.3.4 Ruby/2.5.0-p0 (x86_64-linux)
+      Host:
+      - www.googleapis.com
+      Authorization:
+      - Bearer ya29.c.EloLBvwrri8alIYuUbWAgKiEgUANMO-OiKRiczx1YfBnisb9uow75dOqsrSnMcPTgcIglC16s0tNfnhBlLfvTrhJfHeT-bH90CmVfx8t3eiFv0Yb6G4AXJ0gVqU
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 02 Aug 2018 01:07:40 GMT
+      Expires:
+      - Thu, 02 Aug 2018 01:07:40 GMT
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "error": {
+          "errors": [
+           {
+            "domain": "global",
+            "reason": "notFound",
+            "message": "The resource 'projects/personal-graphite-testing/global/addresses/my-app-lb-address' was not found"
+           }
+          ],
+          "code": 404,
+          "message": "The resource 'projects/personal-graphite-testing/global/addresses/my-app-lb-address' was not found"
+         }
+        }
+    http_version: 
+  recorded_at: Thu, 02 Aug 2018 01:07:40 GMT
+recorded_with: VCR 4.0.0
