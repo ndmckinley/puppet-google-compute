@@ -38,12 +38,12 @@ ENV['TZ'] = 'UTC'
 
 $LOAD_PATH.unshift(File.expand_path('.'))
 $LOAD_PATH.unshift(File.expand_path('./spec/stubs'))
+# Add fixtures so that they can be loaded by integration tests.
 $LOAD_PATH.unshift(File.expand_path('./spec/fixtures/modules/gauth/lib'))
 $LOAD_PATH.unshift(File.expand_path('./spec/fixtures/modules/gcompute/lib'))
 
 #----------------------------------------------------------
 # Block all network traffic
-
 require 'puppetlabs_spec_helper/module_spec_helper'
 require 'webmock/rspec'
 
@@ -61,7 +61,6 @@ end
 require 'rspec-puppet'
 
 RSpec.configure do |c|
-  puts "MODULE PATH = " + c.module_path
   c.include PuppetSpec::Compiler
   c.include PuppetSpec::Files
 
@@ -99,11 +98,18 @@ end
 
 def get_example(example_name)
   # It's not ideal, but puppet unit tests don't support
-  # adding facts, so we have to do these substitutions
-  # ourselves.
+  # these facts-as-variables, so we have to do these
+  # substitutions ourselves.
   File.open("examples/#{example_name}.pp", 'rb').read\
       .gsub('$project', '"personal-graphite-testing"')\
       .gsub('$cred_path', '"/home/nmckinley/.gcloud/Terraform.json"')
+end
+
+def write_example(example_name)
+  s = get_example(example_name)
+  filename = "examples/#{example_name}_test.pp"
+  File.open(filename, 'wb').write(s)
+  filename
 end
 
 require 'mocha/test_unit'
