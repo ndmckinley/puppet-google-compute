@@ -52,6 +52,7 @@ Puppet::Type.type(:gcompute_health_check).provide(:google) do
   end
 
   def self.prefetch(resources)
+    require 'byebug'; byebug
     debug('prefetch')
     resources.each do |name, resource|
       project = resource[:project]
@@ -113,6 +114,7 @@ Puppet::Type.type(:gcompute_health_check).provide(:google) do
   end
 
   def create
+    require 'byebug'; byebug
     debug('create')
     @created = true
     create_req = Google::Compute::Network::Post.new(collection(@resource),
@@ -124,6 +126,7 @@ Puppet::Type.type(:gcompute_health_check).provide(:google) do
   end
 
   def destroy
+    require 'byebug'; byebug
     debug('destroy')
     @deleted = true
     delete_req = Google::Compute::Network::Delete.new(self_link(@resource),
@@ -133,6 +136,7 @@ Puppet::Type.type(:gcompute_health_check).provide(:google) do
   end
 
   def flush
+    require 'byebug'; byebug
     debug('flush')
     # return on !@dirty is for aiding testing (puppet already guarantees that)
     return if @created || @deleted || !@dirty

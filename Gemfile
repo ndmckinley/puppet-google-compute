@@ -27,6 +27,7 @@
 
 source 'https://rubygems.org'
 group :test do
+  gem 'byebug'
   gem 'google-api-client'
   gem 'googleauth'
   gem 'metadata-json-lint'
